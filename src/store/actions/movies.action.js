@@ -19,6 +19,11 @@ export const setPreferences = (data, callback) => async dispatch => {
         callback(null)
     } catch (error) { }
 }
+export const addMovie = () => async dispatch => {
+    try {
+        dispatch({ type: ADD_MOVIE, payload: null });
+    } catch (error) { }
+}
 
 
 export const getMovies = (data, callback) => async dispatch => {

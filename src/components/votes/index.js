@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getMovies, voteMovie } from '../../store/actions/movies.action';
+import { getMovies, voteMovie, addMovie } from '../../store/actions/movies.action';
 import { MovieCards } from '../shared/moviecard/moviecard'
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -8,6 +8,14 @@ import './votes.css'
 class Votes extends Component {
     componentDidMount() {
         this.getMovies();
+    }
+
+    componentDidUpdate() {
+        if (this.props.compareMovies.length < 1) this.setMovies()
+    }
+
+    setMovies() {
+        this.props.addMovie();
     }
 
     getMovies() {
@@ -28,12 +36,13 @@ class Votes extends Component {
         this.props.history.push('/leaderboard')
     }
 
+
     render() {
         const { compareMovies } = this.props;
         let cards = (
             <div className="d-flex cards">
                 {
-                    compareMovies.map((movie, i) =>
+                    compareMovies.length && compareMovies.map((movie, i) =>
                         <MovieCards key={i} movie={movie} vote={this.vote} />
                     )
                 }
@@ -58,6 +67,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = {
     getMovies,
-    voteMovie
+    voteMovie,
+    addMovie
 }
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Votes));
