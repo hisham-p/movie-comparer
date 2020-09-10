@@ -1,0 +1,17 @@
+@media screen and (min-width: 1001px) {
+    .cards {
+        margin: 150px 150px 50px 150px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .cards {
+        margin: 40px;
+    }
+}
+.btn-finish {
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 22px;
+    font-weight: 600;
+}

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Route, Switch ,Redirect} from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Navbar from '../../components/shared/Navbar';
 import Vote from '../../components/votes';
 import Leaderboard from '../../components/leaderboard';
+import Preference from '../../components/preferences';
 class home extends Component {
     render() {
         return (
@@ -10,9 +11,10 @@ class home extends Component {
                 <Navbar />
                 <main>
                     <Switch>
+                        <Route path="/preference" component={Preference} />
                         <Route path="/vote" component={Vote} />
                         <Route path="/leaderboard" component={Leaderboard} />
-                        <Redirect to="/vote" from="/" />
+                        <Redirect to="/preference" from="/" />
                     </Switch>
                 </main>
             </div>

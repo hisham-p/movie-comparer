@@ -1,0 +1,12 @@
+.leader-card {
+    padding: 16px;
+    border: 1px solid #dee2e6 !important;
+}
+.leader-card-image {
+    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/77/30/cinema-design-movie-icon-colorful-vector-9477730.jpg");
+    object-fit: fill;
+    background-size: 400px 400px;
+    height: 100px;
+    width: 100px;
+    object-fit: fill;
+}

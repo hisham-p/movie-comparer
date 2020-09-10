@@ -1,0 +1,9 @@
+export const ALL_MOVIES = 'ALL_MOVIES';
+export const LEADERBOARD = 'LEADERBOARD';
+export const GENRES = 'GENRES';
+export const LANGUAGES = 'LANGUAGES';
+export const GENRE_SELECTED = 'GENRE_SELECTED';
+export const LANGUAGE_SELECTED = 'LANGUAGE_SELECTED';
+export const ADD_MOVIE = 'ADD_MOVIE';
+export const DELETE_MOVIE = 'DELETE_MOVIE';
+export const VOTE = 'VOTE';

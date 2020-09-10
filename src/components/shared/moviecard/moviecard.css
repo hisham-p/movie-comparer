@@ -1,0 +1,40 @@
+@keyframes fadein {
+    from {
+        opacity: 0;
+        height: 0%;
+    }
+    to {
+        opacity: 1;
+        height: 100%;
+    }
+}
+.movie-card {
+    width: 400px;
+    margin: 16px;
+    animation-name: fadein;
+    animation-duration: 0.5s;
+}
+.card-image {
+    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/77/30/cinema-design-movie-icon-colorful-vector-9477730.jpg");
+    height: 400px;
+    object-fit: fill;
+    background-size: 400px 400px;
+}
+.movie-title {
+    margin-top: 300px;
+    color: white;
+    font-size: 28px;
+}
+.card-img-overlay {
+    background: linear-gradient(0deg, #000000c7, transparent);
+    bottom: 55px;
+}
+.card-body {
+    padding: 0;
+}
+.btn-vote {
+    width: 100%;
+    border-radius: 0;
+    padding: 8px;
+    font-size: 24px;
+}
