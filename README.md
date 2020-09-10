@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-Install packages from both main directory and backend directory
+Install packages on both main directory and backend directory
 
 ## `npm install`
 
