@@ -2,7 +2,7 @@ const Movies = require('../../../models/movie.model');
 
 exports.getAllMovies = async (req, res) => {
     try {
-        if (req.query.genres || req.query.language) {
+        if (!req.query.genres || !req.query.language) {
             return res.status(401).json({ message: "Invalid data" });
         }
         let data = await Movies.find(req.query);
@@ -16,7 +16,7 @@ exports.getAllMovies = async (req, res) => {
 }
 exports.getLeaderBoard = async (req, res) => {
     try {
-        if (req.query.genres || req.query.language) {
+        if (!req.query.genres || !req.query.language) {
             return res.status(401).json({ message: "Invalid data" });
         }
         let data = await Movies.find(req.query, null, { sort: { votes: 'desc' } });
@@ -44,7 +44,7 @@ exports.getPrefences = async (req, res) => {
 
 exports.addVote = async (req, res) => {
     try {
-        if (req.params.id) {
+        if (!req.params.id) {
             return res.status(401).json({ message: "Invalid data" });
         }
         await Movies.findOneAndUpdate({ id: req.params.id }, { $inc: { votes: 1 } }, { new: true })
