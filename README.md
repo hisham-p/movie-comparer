@@ -3,9 +3,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 For backend , change directory to backend directory, you can run : 
+(http://localhost:2000)
 
 ## `npm run dev`
-(http://localhost:2000)
 
 For front end , in the main directory,  you can run:
 
