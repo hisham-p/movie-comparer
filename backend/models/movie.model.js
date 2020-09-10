@@ -17,6 +17,7 @@ let Movies = new mongoose.Schema({
     imdbRating: String,
     language: String,
     posterurl: String,
+    votes: Number
 });
 
 //model creation
